@@ -1,0 +1,73 @@
+Palette: EDG32, adrift in dreams
+
+- Full Palette:
+EDG32 Hex: 
+#be4a2f  
+#d77643  
+#ead4aa  
+#e4a672  
+#b86f50  
+#733e39  
+#3e2731  
+#a22633  
+#e43b44  
+#f77622  
+#feae34  
+#fee761  
+#63c74d  
+#3e8948  
+#265c42  
+#193c3e  
+#124e89  
+#0099db  
+#2ce8f5  
+#ffffff  
+#c0cbdc  
+#8b9bb4  
+#5a6988  
+#3a4466  
+#262b44  
+#ff0044  
+#181425  
+#68386c  
+#b55088  
+#f6757a  
+#e8b796  
+#c28569
+
+adrift in dreams Hex:
+#cff09e
+#a8dba8
+#79bd9a
+#3b88686
+#0b486b
+
+- Used Color:
+EDG32
+#ff0044
+#181425
+#262b44
+#3a4466
+#5a6988
+#8b9bb4
+#c0cbdc
+#0095e9
+#124e89
+#2ce8f5
+#fee761
+#feae34
+#f77622
+#e43b44
+#9e2835
+#3f2832
+#265c42
+#3e8948
+#63c74d
+
+adrift in dreams
+#3b88686
+#0b486b
+
+
+
+

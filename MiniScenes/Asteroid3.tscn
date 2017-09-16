@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Scripts/Asteroid3.gd" type="Script" id=1]
+[ext_resource path="res://Images/asteroid/asteroid big/ateroid_big.png" type="Texture" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -2.06902, -38.322, 26.0191, -29.9925, 39.3852, -14.883, 45.7777, -5.58482, 34.3487, 24.2467, 20.7889, 30.6392, -29.3823, -19.1446 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -42.1673, -6.55338, -29.3823, -19.1446, 20.7889, 30.6392, 1.22407, 40.7122, -38.6805, 31.6078, -45.6541, 19.5977 )
+
+[node name="BigAst" type="KinematicBody2D" groups=[ "Asteroid", "Destroyable" ]]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.19371, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 2 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0.19371, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+speed = 10.0
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+
+transform/pos = Vector2( 0.19371, 0 )
+build_mode = 0
+polygon = Vector2Array( -2.06902, -38.322, -29.3823, -19.1446, -42.1673, -6.55338, -45.6541, 19.5977, -38.6805, 31.6078, 1.22407, 40.7122, 20.7889, 30.6392, 34.3487, 24.2467, 45.7777, -5.58482, 39.3852, -14.883, 26.0191, -29.9925 )
+shape_range = Vector2( 0, 1 )
+trigger = false
+
+

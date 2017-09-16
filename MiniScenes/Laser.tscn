@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Scripts/laser.gd" type="Script" id=1]
+[ext_resource path="res://Images/ammo/laser/_0001_Layer-2.png" type="Texture" id=2]
+[ext_resource path="res://Images/ammo/laser/_0000_Layer-0.png" type="Texture" id=3]
+[ext_resource path="res://Images/ammo/laser/_0002_Layer-1.png" type="Texture" id=4]
+
+[node name="Laser" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+enabled = false
+cast_to = Vector2( 320, 0 )
+layer_mask = 1
+type_mask = 15
+
+[node name="Middle" type="Sprite" parent="RayCast2D"]
+
+transform/pos = Vector2( 0.00636649, 0.00523448 )
+texture = ExtResource( 2 )
+offset = Vector2( 99.7301, -0.00523448 )
+region = true
+region_rect = Rect2( 0, 0, 91, 132 )
+
+[node name="End" type="Sprite" parent="RayCast2D"]
+
+transform/pos = Vector2( 0.00328112, 0.00617647 )
+texture = ExtResource( 3 )
+offset = Vector2( 172.997, 0.0938234 )
+region_rect = Rect2( 0, 0, 90, 138 )
+
+[node name="Start" type="Sprite" parent="RayCast2D"]
+
+transform/pos = Vector2( -0.00660706, -0.0037117 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.00660706, 0.0037117 )
+region = true
+region_rect = Rect2( 0, 0, 109, 132 )
+
+

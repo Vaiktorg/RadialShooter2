@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Scripts/Asteroid2.gd" type="Script" id=1]
+[ext_resource path="res://Images/asteroid/asteroid medium/asteroid_md.png" type="Texture" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 0.380001, -23.2638, 12.4013, -18.4041, 22.6323, -3.05771, 23.3996, 4.44497, 12.9129, 16.8074, 1.4031, 18.7683, -11.4708, 14.1644, -21.5312, 7.429, -22.3838, -3.39874, -13.7728, -18.3189 )
+
+[node name="MedAst" type="KinematicBody2D" groups=[ "Asteroid", "Destroyable" ]]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -0.463928, 2.20366 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+speed = 20.0
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+
+transform/pos = Vector2( -0.463928, 2.20366 )
+build_mode = 0
+polygon = Vector2Array( -13.7728, -18.3189, -22.3838, -3.39874, -21.5312, 7.429, -11.4708, 14.1644, 1.4031, 18.7683, 12.9129, 16.8074, 23.3996, 4.44497, 22.6323, -3.05771, 12.4013, -18.4041, 0.380001, -23.2638 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+

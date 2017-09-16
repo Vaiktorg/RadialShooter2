@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Scripts/Weapon.gd" type="Script" id=1]
+[ext_resource path="res://Images/weapon/player_blaster.png" type="Texture" id=2]
+
+[node name="Weapon" type="Node2D"]
+
+script/script = ExtResource( 1 )
+weapon = "DoubleBlaster"
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+offset = Vector2( 0, -64 )
+
+[node name="BulletSpawnBlaster" type="Position2D" parent="."]
+
+transform/pos = Vector2( -3.6, -76 )
+
+[node name="BulletSpawnLaser" type="RayCast2D" parent="BulletSpawnBlaster"]
+
+enabled = true
+cast_to = Vector2( 0, -50 )
+layer_mask = 1
+type_mask = 15
+
+[node name="BulletSpawnDBlaster" type="Position2D" parent="."]
+
+transform/pos = Vector2( -4.5, -76 )
+
+[node name="BulletSpawnDBlaster1" type="Position2D" parent="."]
+
+transform/pos = Vector2( 4.5, -76 )
+
+

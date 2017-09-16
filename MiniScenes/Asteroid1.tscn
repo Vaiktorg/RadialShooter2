@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Scripts/Asteroid1.gd" type="Script" id=1]
+[ext_resource path="res://Images/asteroid/asteroid small/asteroid_sm.png" type="Texture" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 5.9919, -7.23586, 8.84827, -4.10315, 8.11111, 3.77482, 5.80762, 6.81542, -3.22206, 9.39533, -9.16506, 4.74228, -9.94824, -4.19529, -5.70983, -9.12472, 0.832109, -9.03262 )
+
+[node name="SmlAst" type="KinematicBody2D" groups=[ "Asteroid", "Destroyable" ]]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.967465, 0.138209 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+speed = 30.0
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+
+transform/pos = Vector2( 0.967465, 0.138209 )
+build_mode = 0
+polygon = Vector2Array( 0.832109, -9.03262, -5.70983, -9.12472, -9.94824, -4.19529, -9.16506, 4.74228, -3.22206, 9.39533, 5.80762, 6.81542, 8.11111, 3.77482, 8.84827, -4.10315, 5.9919, -7.23586 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+
